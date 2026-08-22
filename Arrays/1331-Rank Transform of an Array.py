@@ -7,4 +7,4 @@ class Solution:
                 unique.append(x)
         for i in range(0,len(arr)):
             arr[i]=bisect_left(unique,arr[i])+1
-        return arr            
+        return arr
