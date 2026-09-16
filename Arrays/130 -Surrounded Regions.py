@@ -44,4 +44,4 @@ class Solution:
         for r in range(rows):
             for c in range(cols):
                 if board[r][c]=="O"and visited[r][c]==0:
-                    board[r][c]="X"            
+                    board[r][c]="X"
