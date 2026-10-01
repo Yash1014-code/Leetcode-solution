@@ -15,4 +15,4 @@ class Solution:
                     return False
                 if s[i]=='}' and t!='{':
                     return False
-        return len(stack)==0                   
+        return len(stack)==0                  
