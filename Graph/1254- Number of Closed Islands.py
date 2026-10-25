@@ -1,0 +1,29 @@
+class Solution:
+    def dfs(self,grid,i,j,r,c):
+        if i<0 or i >= r or j<0 or j>=c:
+            return 
+        if grid[i][j]!=0:
+            return
+        grid[i][j]=1
+        self.dfs(grid,i+1,j,r,c) 
+        self.dfs(grid,i,j+1,r,c)
+        self.dfs(grid,i-1,j,r,c)        
+        self.dfs(grid,i,j-1,r,c)        
+
+    def closedIsland(self, grid: list[list[int]]) -> int:
+        r = len(grid)
+        c = len(grid[0])
+        count = 0
+        for i in range(r):
+            self.dfs(grid, i, 0, r, c)
+            self.dfs(grid, i, c-1, r, c)
+
+        for j in range(c):
+            self.dfs(grid, 0, j, r, c)
+            self.dfs(grid, r-1, j, r, c)
+        for i in range(1,r-1):
+            for j in range(1,c-1):
+                if grid[i][j] == 0 :
+                    self.dfs(grid,i,j,r,c)
+                    count += 1
+        return count 
