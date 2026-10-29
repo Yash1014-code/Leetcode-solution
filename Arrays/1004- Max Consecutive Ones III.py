@@ -15,4 +15,4 @@ class Solution:
             if zero<=k:
                 maxi=max(maxi,right-left+1)
             right+=1
-        return maxi  
+        return maxi
