@@ -15,4 +15,4 @@ class Solution:
             r_sum+=cardPoints[r]
             r-=1
             maxi=max(maxi,l_sum+r_sum)
-        return maxi        
+        return maxi       
