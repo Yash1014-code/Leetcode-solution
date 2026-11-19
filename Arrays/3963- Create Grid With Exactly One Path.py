@@ -8,4 +8,4 @@ class Solution:
         while i<m:
             grid[i][n-1]="."
             i+=1   
-        return["".join(row) for row in grid]     
+        return["".join(row) for row in grid]      
